@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> '
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,14 @@
     <title>My First Website</title>
     <link rel="stylesheet" href="style.css">
 	
-	<body>
+	<body> 
+	<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>	
     <header>
         <h1>P3RC3 APPERAL'S</h1>
     </header>
@@ -24,3 +31,36 @@
 	
 </body>
 </html>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="gallery">
+    <h2>My Gallery</h2>
+    <div class="gallery-grid">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+    </div>
+</section>
