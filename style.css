@@ -99,19 +99,3 @@ html {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-body {
-    background: #1a1a1a;
-    color: #fff;
-}
-
-nav {
-    background-color: #222;
-}
-
-section {
-    background-color: #2a2a2a;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 255, 127, 0.3);
-}
