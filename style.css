@@ -220,17 +220,24 @@ form {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Style the search bar */
+/* Smaller and compact search bar */
 #search-bar {
-    padding: 8px;
-    font-size: 16px;
-    border: 2px solid #00ffcc;
+    width: 150px; /* Adjust the width */
+    height: 30px; /* Adjust the height */
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #00ffcc;
     border-radius: 5px;
-    outline: none;
     background-color: black;
     color: white;
+    outline: none;
+    transition: width 0.3s ease;
+}
+
+/* Expand on focus for better usability */
+#search-bar:focus {
+    width: 200px;
+
 }
 
 /* Style the cart icon */
