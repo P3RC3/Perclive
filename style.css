@@ -1,264 +1,81 @@
-body {
-    font-family: orbitron, sans-serif;
-    background-color: #0a0a0a;
+/* Reset default margins and paddings */
+* {
     margin: 0;
     padding: 0;
-    color: #e0e0e0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Default (for desktops & larger screens) */
+/* Style the header */
 header {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #00ffcc;
-    text-transform: uppercase;
-}
-
-/* For iPads (landscape & portrait) */
-@media only screen and (max-width: 1024px) {
-    header {
-        font-size: 20px; /* Slightly smaller */
-        top: 15px; /* Adjust spacing */
-        left: 15px;
-    }
-}
-
-/* For smaller screens (like iPad Mini or iPhones) */
-@media only screen and (max-width: 768px) {
-    header {
-        font-size: 18px;
-        top: 10px;
-        left: 10px;
-    }
-}
-
-section {
-    background: rgba(255, 255, 255, 0.1); /* Transparent white */
-    backdrop-filter: blur(10px); /* Blurred background */
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-}
-
-nav {
-    background: rgba(255, 255, 255, 0.05); /* Transparent navbar */
-    backdrop-filter: blur(5px);
-    padding: 15px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #00ffcc;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #ffffff;
-    text-shadow: 0 0 10px #00ffcc;
-}
-
-form {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    font-weight: bold;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    background: transparent;
-    color: #00ffcc; /* Neon cyan */
-    border: 2px solid #00ffcc;
     padding: 10px 20px;
-    border-radius: 50px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
-}
-
-button:hover {
-    background: #00ffcc;
-    color: #0a0a0a;
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-.gallery-grid img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px;
-}
-
-.gallery-grid img:hover {
-    transform: scale(1.05) rotateY(5deg);
-    box-shadow: 0 0 30px rgba(0, 255, 204, 0.5);
-}
-
-#loader {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
-    width: 100%;
-    height: 100%;
-    background: #0a0a0a;
-    color: #00ffcc;
-    font-size: 24px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s ease;
-}
-
-#loader span {
-    animation: blink 1s infinite alternate;
-}
-
-@keyframes blink {
-    from { opacity: 1; }
-    to { opacity: 0.5; }
-}
-
-body.loaded #loader {
-    opacity: 0;
-    pointer-events: none;
-}
-
-section {
-    position: relative;
-    overflow: hidden;
-}
-
-section::before {
-    content: "";
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    border: 2px solid transparent;
-    border-image: linear-gradient(90deg, #00ffcc, transparent, #00ffcc);
-    border-image-slice: 1;
-    animation: glowBorder 3s infinite alternate;
+    display: flex;
+    justify-content: center;
 }
 
-@keyframes glowBorder {
-    from {
-        box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
-    }
-    to {
-        box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
-    }
+/* Navigation Bar */
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    background: transparent;
-    border: 2px solid #00ffcc;
-    color: #e0e0e0;
-    border-radius: 5px;
-    outline: none;
-    font-size: 16px;
-    transition: all 0.3s ease-in-out;
+/* Left Side: Logo & Menu */
+.nav-left {
+    display: flex;
+    align-items: center;
 }
 
-input:focus, textarea:focus {
-    border-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+.heart-logo {
+    width: 40px;
+    margin-right: 10px;
 }
 
-form {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s ease-in-out forwards;
+.menu-btn {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 15px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    
-/* Smaller and compact search bar */
-#search-bar {
-    width: 150px; /* Adjust the width */
-    height: 30px; /* Adjust the height */
-    padding: 5px;
-    font-size: 14px;
-    border: 1px solid #00ffcc;
-    border-radius: 5px;
-    background-color: black;
-    color: white;
-    outline: none;
-    transition: width 0.3s ease;
-}
-
-/* Expand on focus for better usability */
-#search-bar:focus {
-    width: 200px;
-
-}
-
-/* Style the cart icon */
-#cart-icon {
-    font-size: 22px;
+.home-btn {
     text-decoration: none;
-    color: #00ffcc;
-    position: relative;
-    padding: 0 15px;
+    color: black;
+    font-size: 18px;
 }
 
-/* Cart count bubble */
-#cart-count {
-    background-color: red;
-    color: white;
-    font-size: 14px;
-    padding: 3px 6px;
-    border-radius: 50%;
-    position: absolute;
-    top: -5px;
-    right: -10px;
+/* Center: Small Logo */
+.nav-center .small-logo {
+    width: 80px;
 }
 
+/* Right Side: Icons */
+.nav-right button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 80px; /* To prevent overlap with fixed header */
+}
+
+.main-logo img {
+    width: 300px;
+}
