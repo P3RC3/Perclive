@@ -65,3 +65,11 @@ submitBtn.addEventListener("click", function(event) {
         alert("Please fill out all fields correctly!");
     }
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const homeBtn = document.querySelector('a[href="index.html"]');
+
+    homeBtn.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevents default link behavior
+        window.location.href = "index.html"; // Forces page reload
+    });
+});
