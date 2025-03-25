@@ -73,3 +73,22 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = "index.html"; // Forces page reload
     });
 });
+
+// Dummy search function (replace with actual product search)
+function searchFunction() {
+    let searchQuery = document.getElementById("search-bar").value.toLowerCase();
+    console.log("Searching for: " + searchQuery);
+}
+
+// Shopping cart logic
+let cartCount = 0;
+document.getElementById("cart-icon").addEventListener("click", function() {
+    alert("You have " + cartCount + " items in your cart.");
+});
+
+// Example function to add items to the cart
+function addToCart() {
+    cartCount++;
+    document.getElementById("cart-count").innerText = cartCount;
+    alert("Item added to cart!");
+}
