@@ -7,3 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.body.appendChild(button);
 });
+
+document.querySelectorAll('.panel').forEach(panel => {
+    panel.addEventListener('click', () => {
+        panel.classList.toggle('open');
+    });
+});
