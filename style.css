@@ -138,5 +138,32 @@ body.loaded #loader {
     pointer-events: none;
 }
 
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-image: linear-gradient(90deg, #00ffcc, transparent, #00ffcc);
+    border-image-slice: 1;
+    animation: glowBorder 3s infinite alternate;
+}
+
+@keyframes glowBorder {
+    from {
+        box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
+    }
+}
+
 
 
