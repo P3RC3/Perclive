@@ -165,5 +165,22 @@ section::before {
     }
 }
 
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: transparent;
+    border: 2px solid #00ffcc;
+    color: #e0e0e0;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+}
 
 
