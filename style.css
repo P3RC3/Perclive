@@ -134,4 +134,14 @@ body.loaded #loader {
     pointer-events: none;
 }
 
+.gallery-grid img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05) rotateY(5deg);
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.5);
+}
+
 
