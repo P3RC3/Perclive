@@ -52,3 +52,16 @@ document.addEventListener("DOMContentLoaded", function() {
     emailInput.addEventListener("input", checkInputs);
     messageInput.addEventListener("input", checkInputs);
 });
+
+submitBtn.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent form from actually submitting
+
+    if (nameInput.value.length >= 3 && validateEmail(emailInput.value) && messageInput.value.length >= 10) {
+        alert("Message Sent Successfully! 🚀");
+        nameInput.value = "";
+        emailInput.value = "";
+        messageInput.value = "";
+    } else {
+        alert("Please fill out all fields correctly!");
+    }
+});
