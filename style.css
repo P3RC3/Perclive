@@ -220,6 +220,7 @@ form {
         opacity: 1;
         transform: translateY(0);
     }
+    
 /* Smaller and compact search bar */
 #search-bar {
     width: 150px; /* Adjust the width */
