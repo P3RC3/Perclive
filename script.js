@@ -13,3 +13,7 @@ document.querySelectorAll('.panel').forEach(panel => {
         panel.classList.toggle('open');
     });
 });
+
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});
