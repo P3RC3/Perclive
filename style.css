@@ -75,17 +75,22 @@ form input, form textarea {
     border-radius: 5px;
 }
 
-form button {
-    background-color: #333;
-    color: white;
+button {
+    background: transparent;
+    color: #00ffcc; /* Neon cyan */
+    border: 2px solid #00ffcc;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    border-radius: 50px;
+    font-size: 16px;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
 }
 
-form button:hover {
-    background-color: #555;
+button:hover {
+    background: #00ffcc;
+    color: #0a0a0a;
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
 }
 
 html {
