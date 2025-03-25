@@ -222,3 +222,35 @@ form {
     }
 }
 
+/* Style the search bar */
+#search-bar {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    outline: none;
+    background-color: black;
+    color: white;
+}
+
+/* Style the cart icon */
+#cart-icon {
+    font-size: 22px;
+    text-decoration: none;
+    color: #00ffcc;
+    position: relative;
+    padding: 0 15px;
+}
+
+/* Cart count bubble */
+#cart-count {
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    padding: 3px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
