@@ -19,21 +19,26 @@ header {
     justify-content: center;
 }
 
-/* Navigation Bar */
 .nav-container {
-    width: 90%;
-    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
+    max-width: 1200px;
 }
 
-/* Left Side: Logo & Menu */
-.nav-left {
+.nav-left, .nav-right {
     display: flex;
     align-items: center;
 }
 
+.nav-right button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
 .heart-logo {
     width: 40px;
     margin-right: 10px;
