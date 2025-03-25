@@ -6,14 +6,33 @@ body {
     color: #e0e0e0;
 }
 
+/* Default (for desktops & larger screens) */
 header {
-    position: absolute; /* Position it relative to the top-left */
-    top: 10px; /* Distance from the top */
-    left: 20px; /* Distance from the left */
-    font-size: 24px; /* Adjust size if needed */
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 24px;
     font-weight: bold;
-    color: #00ffcc; /* Futuristic neon color */
+    color: #00ffcc;
     text-transform: uppercase;
+}
+
+/* For iPads (landscape & portrait) */
+@media only screen and (max-width: 1024px) {
+    header {
+        font-size: 20px; /* Slightly smaller */
+        top: 15px; /* Adjust spacing */
+        left: 15px;
+    }
+}
+
+/* For smaller screens (like iPad Mini or iPhones) */
+@media only screen and (max-width: 768px) {
+    header {
+        font-size: 18px;
+        top: 10px;
+        left: 10px;
+    }
 }
 
 section {
